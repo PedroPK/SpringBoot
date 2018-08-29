@@ -1,4 +1,4 @@
-package vipList.model.entities;
+package vipList.config.model.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

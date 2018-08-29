@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import vipList.model.entities.Convidado;
-import vipList.model.repository.ConvidadoRepository;
+import vipList.config.model.entities.Convidado;
+import vipList.config.model.repository.ConvidadoRepository;
 
 @Controller
 public class ConvidadosController {
