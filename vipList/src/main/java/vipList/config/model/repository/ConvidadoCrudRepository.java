@@ -7,6 +7,6 @@ import vipList.config.model.entities.Convidado;
 
 
 @Repository
-public interface ConvidadoRepository extends CrudRepository<Convidado, Long>{
+public interface ConvidadoCrudRepository extends CrudRepository<Convidado, Long>{
 	
 }

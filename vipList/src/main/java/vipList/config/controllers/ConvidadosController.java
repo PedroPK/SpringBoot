@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import vipList.config.model.entities.Convidado;
-import vipList.config.model.repository.ConvidadoRepository;
+import vipList.config.model.repository.ConvidadoCrudRepository;
 
 @Controller
 public class ConvidadosController {
@@ -16,7 +16,7 @@ public class ConvidadosController {
 	private static final String INDEX = "index";
 	
 	@Autowired
-	private ConvidadoRepository aRepository;
+	private ConvidadoCrudRepository aRepository;
 	
 	@RequestMapping(SLASH)
 	public String getIndexPage() {
@@ -25,9 +25,8 @@ public class ConvidadosController {
 	
 	@RequestMapping(SLASH + LISTA_CONVIDADOS)
 	public String getListaConvidados(Model pModel) {
-		
 		Iterable<Convidado> iterableConvidados = this.aRepository.findAll();
-		pModel.addAttribute(iterableConvidados);
+		pModel.addAttribute("convidados", iterableConvidados);
 		
 		return LISTA_CONVIDADOS;
 	}
